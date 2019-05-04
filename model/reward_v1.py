@@ -28,15 +28,15 @@ def reward_function(params):
     ### Constants ###
     #################
 
-    MAX_REWARD = 1e5
-    MIN_REWARD = 1e-5
+    MAX_REWARD = 1e2
+    MIN_REWARD = 1e-3
     DIRECTION_THRESHOLD = 10.0
     ABS_STEERING_THRESHOLD = 20
 
     ########################
     ### Input parameters ###
     ########################
-
+    on_track = params['all_wheels_on_track']
     distance_from_center = params['distance_from_center']
     track_width = params['track_width']
     steering = abs(params['steering_angle']) # Only need the absolute steering angle for calculations
@@ -59,10 +59,9 @@ def reward_function(params):
     def on_track_reward(current_reward, on_track):
         if not on_track:
             current_reward = MIN_REWARD
-        else
+        else:
             current_reward = MAX_REWARD
         return current_reward
-
 
     def distance_from_center_reward(current_reward, track_width, distance_from_center):
         # Calculate 3 marks that are farther and father away from the center line
@@ -110,7 +109,6 @@ def reward_function(params):
             current_reward *= 0.5
 
         return current_reward
-
 
     def steering_reward(current_reward, steering):
         # Penalize reward if the car is steering too much (your action space will matter)
