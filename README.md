@@ -38,3 +38,6 @@ The function will achieve 15 sec lap time (Note: record thus far has been 7.8sec
 | No# Experience Episodes between each policy-updating iteration | 20    |
 | No# of Epochs                                                  | 10    |
 
+## Shout Outs
+
+AWS DeepRacer Team
