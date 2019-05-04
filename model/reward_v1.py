@@ -31,7 +31,7 @@ def reward_function(params):
     MAX_REWARD = 1e2
     MIN_REWARD = 1e-3
     DIRECTION_THRESHOLD = 10.0
-    ABS_STEERING_THRESHOLD = 20
+    ABS_STEERING_THRESHOLD = 30
 
     ########################
     ### Input parameters ###
@@ -118,7 +118,7 @@ def reward_function(params):
 
     def throttle_reward(current_reward, speed, steering):
         # Decrease throttle while steering
-        if speed > 1.5 - (0.4 * abs(steering)):
+        if speed > 2.5 - (0.4 * abs(steering)):
             current_reward *= 0.8
         return current_reward
 

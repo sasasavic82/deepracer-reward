@@ -1,7 +1,7 @@
 # AWS DeepRacer Reward Function
 AWS DeepRacer reward function
 
-The function will achieve 15 sec lap time (Note: record thus far has been 7.8sec)
+The function will achieve ~16-17sec sec lap time in evaluation environment, but will be much closer to 11-12sec in physical environment (Note: world record thus far has been 7.8sec)
 
 ![Alt text](./docs/agent_environment.png)
 
